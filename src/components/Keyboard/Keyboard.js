@@ -1,5 +1,5 @@
 import React from "react";
-import keyboardKeys from "../../constants";
+import { keyboardKeys } from "../../constants";
 import KeyboardRow from "../KeyboardRow";
 
 import { checkGuess } from "../../game-helpers";
@@ -33,7 +33,7 @@ function Keyboard({ guesses, answer }) {
   const letterStatusMap = getLetterStatusMap(guesses);
 
   return (
-    <div>
+    <div className="keyboard">
       <KeyboardRow keys={keyboardKeys[0]} letterStatusMap={letterStatusMap} />
       <KeyboardRow keys={keyboardKeys[1]} letterStatusMap={letterStatusMap} />
       <KeyboardRow keys={keyboardKeys[2]} letterStatusMap={letterStatusMap} />

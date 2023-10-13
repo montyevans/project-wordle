@@ -1,6 +1,6 @@
 import React from "react";
 
-function Banner({ gameResult }) {
+function Banner({ gameResult, resetGame }) {
   const { winStatus, numGuesses, answer } = gameResult;
   const resultToClassMap = {
     won: "happy",
@@ -25,7 +25,14 @@ function Banner({ gameResult }) {
         Sorry, the correct answer is <strong>{answer}</strong>
       </p>
     );
-  return <div className={bannerClassString}>{bannerText}</div>;
+  return (
+    <div className={bannerClassString}>
+      <p>{bannerText}</p>
+      <button onClick={resetGame} className="restart">
+        Restart
+      </button>
+    </div>
+  );
 }
 
 export default Banner;

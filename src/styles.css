@@ -21,7 +21,8 @@ html {
   Custom styles
 */
 body {
-  font-family: sans-serif;
+  /* font-family: sans-serif; */
+  font-family: "Helvetica"
 }
 
 @media (max-height: 600px) {
@@ -107,6 +108,29 @@ h1 {
   font-size: 2rem;
 }
 
+.keyboardKey {
+  place-content: center;
+  /* border: 2px solid var(--color-gray-700); */
+  background-color: var(--color-gray-700);
+  border-radius: 3px;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.keyboardRow {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 4px;
+}
+
+.keyboard {
+  display: block;
+  /* width: 100px; */
+  /* gap: 4px; */
+}
+
 /*
   Round the corners for the 4 cells at the very corners of
   the game board
@@ -138,6 +162,13 @@ h1 {
   background: var(--color-warning);
   border-color: var(--color-warning);
   color: white;
+}
+
+.restart {
+  background-color: var(--color-gray-100);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 10px;
 }
 
 .guess-input-wrapper {

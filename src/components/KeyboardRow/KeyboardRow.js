@@ -10,14 +10,14 @@ function KeyboardRow({ keys, letterStatusMap }) {
     return "keyboardKey";
   }
   return (
-    <div>
+    <div className="keyboardRow">
       {keys.map((key, index) => {
         return (
           <button
             key={index}
             className={getLetterClassString(key.toUpperCase())}
           >
-            {key}
+            {key.toUpperCase()}
           </button>
         );
       })}
